@@ -971,6 +971,8 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>ForceDisplayRotationInEFI</key>
+				<integer>0</integer>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
@@ -981,8 +983,6 @@
 				<data>aXQ6NA==</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
-				<key>ForceDisplayRotationInEFI</key>
-				<integer>0</integer>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1049,11 +1049,11 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02015404GUP8PGUE</string>
+			<string>C02003101GUP8PGAD</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>2xUBZStI</data>
+			<data>EDtxJ+S7</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
@@ -1061,9 +1061,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro16,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CK0JUML7H</string>
+			<string>C02C403GML7H</string>
 			<key>SystemUUID</key>
-			<string>E8C3DE82-D09D-4820-9F6A-DFCD32913466</string>
+			<string>D4B95902-26AB-4342-B7F0-0B43459C8609</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -1074,13 +1074,13 @@
 			<key>FirmwareFeaturesMask</key>
 			<data>f////wAAAAA=</data>
 			<key>MLB</key>
-			<string>C02015404GUP8PGUE</string>
+			<string>C02003101GUP8PGAD</string>
 			<key>ROM</key>
-			<data>2xUBZStI</data>
+			<data>EDtxJ+S7</data>
 			<key>SystemSerialNumber</key>
-			<string>C02CK0JUML7H</string>
+			<string>C02C403GML7H</string>
 			<key>SystemUUID</key>
-			<string>E8C3DE82-D09D-4820-9F6A-DFCD32913466</string>
+			<string>D4B95902-26AB-4342-B7F0-0B43459C8609</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1152,10 +1152,38 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>AudioDxe.efi</string>
-			<string>OpenCanopy.efi</string>
-			<string>OpenHfsPlus.efi</string>
-			<string>OpenRuntime.efi</string>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>AudioDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenCanopy.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenHfsPlus.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenRuntime.efi</string>
+			</dict>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -1181,7 +1209,7 @@
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
 			<key>ConsoleMode</key>
-			<string></string>
+			<string>Max</string>
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>ForceResolution</key>
