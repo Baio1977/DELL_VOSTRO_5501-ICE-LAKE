@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLqRLCvC.aml, Mon Oct  4 22:31:15 2021
+ * Disassembly of iASLgnmYkL.aml, Thu Oct  7 20:49:12 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000744 (1860)
+ *     Length           0x00000775 (1909)
  *     Revision         0x02
- *     Checksum         0x56
+ *     Checksum         0xDF
  *     OEM ID           "Hack"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -30,6 +30,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
+    External (_SB_.PCI0.LPCB.RTC_, DeviceObj)
     External (_SB_.PCI0.RP05.PXSX._OFF, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.RP08, DeviceObj)
     External (_SB_.PCI0.RP08.PXSX, DeviceObj)
@@ -49,15 +50,12 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
 
     Scope (\)
     {
-        Method (_INI, 0, NotSerialized)  // _INI: Initialize
+        If (_OSI ("Darwin"))
         {
-            If (_OSI ("Darwin"))
-            {
-                STAS = 0x02
-                \_SB.ACOS = 0x80
-                \_SB.ACSE = Zero
-                HPTE = Zero
-            }
+            STAS = 0x02
+            HPTE = Zero
+            \_SB.ACOS = 0x80
+            \_SB.ACSE = Zero
         }
 
         Scope (_SB)
@@ -259,6 +257,21 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
                                     }
                                 }
                             })
+                        }
+                    }
+
+                    Scope (RTC)
+                    {
+                        Method (_STA, 0, NotSerialized)  // _STA: Status
+                        {
+                            If (_OSI ("Darwin"))
+                            {
+                                Return (Zero)
+                            }
+                            Else
+                            {
+                                Return (0x0F)
+                            }
                         }
                     }
                 }
