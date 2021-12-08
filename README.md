@@ -108,7 +108,6 @@ See [ioreg](./ioreg%20MacBook%20Pro%2016%2C2.ioreg) for more clarification
 ### Disable : 
 * Secure Boot
 * Absolute
-* TPM2.0 Security On
 * Intel SGX
 * SMM Security Migration
 * Wake on AC
