@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLNVFg95.aml, Wed Dec  8 10:08:16 2021
+ * Disassembly of iASL03Papc.aml, Fri Dec 17 21:58:10 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000775 (1909)
+ *     Length           0x00000791 (1937)
  *     Revision         0x02
- *     Checksum         0x36
+ *     Checksum         0xAC
  *     OEM ID           "Hack"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -23,6 +23,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
     External (_SB_.AC__, DeviceObj)
     External (_SB_.ACOS, IntObj)
     External (_SB_.ACSE, IntObj)
+    External (_SB_.AWAC._STA, IntObj)
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.I2C1, DeviceObj)
@@ -52,7 +53,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
     {
         If (_OSI ("Darwin"))
         {
-            STAS = 0x02
+            \_SB.AWAC._STA = Zero
             HPTE = Zero
             \_SB.ACOS = 0x80
             \_SB.ACSE = Zero
