@@ -87,10 +87,10 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 ### Special Config:
 
 - Usb port mapping performed
-- SSDT-Hack Essential patch
+- SSDT-Hack Full patch
 - Applied cosmetics PCI Dev
 
-See [ioreg](./ioreg%20MacBook%20Pro%2016%2C2.ioreg) for more clarification
+See [ioreg] for more clarification
 
 
 ### MacOS bootable USB creation:
