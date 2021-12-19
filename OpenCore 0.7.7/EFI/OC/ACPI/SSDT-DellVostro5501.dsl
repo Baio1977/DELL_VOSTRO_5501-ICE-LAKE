@@ -1,22 +1,22 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200925 (64-bit version)
- * Copyright (c) 2000 - 2020 Intel Corporation
+ * AML/ASL+ Disassembler version 20210331 (64-bit version)
+ * Copyright (c) 2000 - 2021 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASL03Papc.aml, Fri Dec 17 21:58:10 2021
+ * Disassembly of iASLcPABTD.aml, Sun Dec 19 11:36:33 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000791 (1937)
+ *     Length           0x00000759 (1881)
  *     Revision         0x02
- *     Checksum         0xAC
+ *     Checksum         0xD3
  *     OEM ID           "Hack"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20200925 (538970405)
+ *     Compiler Version 0x20210331 (539034417)
  */
 DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
 {
@@ -29,7 +29,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
     External (_SB_.PCI0.I2C1, DeviceObj)
     External (_SB_.PCI0.I2C1.TPD0, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
-    External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
     External (_SB_.PCI0.LPCB.RTC_, DeviceObj)
     External (_SB_.PCI0.RP05.PXSX._OFF, MethodObj)    // 0 Arguments
@@ -39,14 +38,11 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
     External (_SB_.PCI0.RP09.PXSX, DeviceObj)
     External (_SB_.PCI0.RP13, DeviceObj)
     External (_SB_.PCI0.RP13.PXSX, DeviceObj)
-    External (_SB_.PCI0.SBUS, DeviceObj)
     External (_SB_.PCI0.TXHC, DeviceObj)
     External (_SB_.PCI0.TXHC.RHUB, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
     External (_SB_.UBTC, DeviceObj)
     External (HPTE, IntObj)
-    External (STAS, IntObj)
-    External (TPDM, FieldUnitObj)
     External (XPRW, MethodObj)    // 2 Arguments
 
     Scope (\)
@@ -67,7 +63,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
                 {
                     Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                     {
-                        0x18, 
+                        0x16, 
                         0x03
                     })
                 }
