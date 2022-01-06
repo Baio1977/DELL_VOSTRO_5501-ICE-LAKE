@@ -1098,6 +1098,12 @@
                 <integer>50</integer>
                 <key>KeySubsequentDelay</key>
                 <integer>5</integer>
+                <key>PointerPollMask</key>
+                <integer>-1</integer>
+                <key>PointerPollMax</key>
+                <integer>80</integer>
+                <key>PointerPollMin</key>
+                <integer>10</integer>
                 <key>PointerSpeedDiv</key>
                 <integer>1</integer>
                 <key>PointerSpeedMul</key>
@@ -1109,9 +1115,11 @@
                 <integer>0</integer>
                 <key>AudioDevice</key>
                 <string>PciRoot(0x0)/Pci(0x1F,0x3)</string>
-                <key>AudioOut</key>
-                <integer>0</integer>
+                <key>AudioOutMask</key>
+                <integer>15</integer>
                 <key>AudioSupport</key>
+                <false/>
+                <key>DisconnectHda</key>
                 <false/>
                 <key>MinimumVolume</key>
                 <integer>20</integer>
