@@ -98,7 +98,7 @@ See [ioreg] for more clarification
 - [Guide Dortania](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) - USB creation
 
 
-## Bios settings for Bios Version 1.9
+## Bios settings for Bios Version 1.10.0
 ### Enable :
 * SATA Operation : AHCI
 * Fastboot : Thorough
