@@ -26,7 +26,7 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 | NVME             | SAMSUNG 970 EVO PLUS 500 GB (MACOS)|
 | SmBios           | MacBookPro 16,2                    |
 | BootLoader       | OpenCore                           |
-| macOS            | Big Sur 11.6 \ Monterey 12.0 Beta8 |
+| macOS            | Monterey 12.3                      |
 
 
 ![infobigsur](./Screenshot/infomac.png)
