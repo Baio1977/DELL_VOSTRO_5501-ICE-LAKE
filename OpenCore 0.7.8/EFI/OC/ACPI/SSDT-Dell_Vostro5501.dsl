@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLsd9UmZ.aml, Sat Feb  5 20:46:54 2022
+ * Disassembly of iASLkyq0id.aml, Mon Feb  7 20:35:09 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
  *     Length           0x00000790 (1936)
  *     Revision         0x02
- *     Checksum         0xBD
+ *     Checksum         0xBF
  *     OEM ID           "Hack"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000001 (1)
@@ -67,7 +67,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000001)
                 {
                     Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                     {
-                        0x18, 
+                        0x16, 
                         0x03
                     })
                 }
