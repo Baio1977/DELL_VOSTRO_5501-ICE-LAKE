@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLkyq0id.aml, Mon Feb  7 20:35:09 2022
+ * Disassembly of iASL5NSHgN.aml, Sun Apr  3 00:17:44 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000790 (1936)
+ *     Length           0x0000083B (2107)
  *     Revision         0x02
- *     Checksum         0xBF
+ *     Checksum         0xAA
  *     OEM ID           "Hack"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000001 (1)
@@ -45,6 +45,9 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000001)
     External (_SB_.PR00, ProcessorObj)
     External (_SB_.UBTC, DeviceObj)
     External (HPTE, IntObj)
+    External (SSD1, IntObj)
+    External (SSH1, IntObj)
+    External (SSL1, IntObj)
     External (TPDM, IntObj)
     External (XPRW, MethodObj)    // 2 Arguments
 
@@ -113,6 +116,45 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000001)
 
                 Scope (I2C1)
                 {
+                    If (_OSI ("Darwin"))
+                    {
+                        Method (PKGX, 3, Serialized)
+                        {
+                            Name (PKG, Package (0x03)
+                            {
+                                Zero, 
+                                Zero, 
+                                Zero
+                            })
+                            PKG [Zero] = Arg0
+                            PKG [One] = Arg1
+                            PKG [0x02] = Arg2
+                            Return (PKG) /* \_SB_.PCI0.I2C1.PKGX.PKG_ */
+                        }
+                    }
+
+                    If (_OSI ("Darwin"))
+                    {
+                        Method (SSCN, 0, NotSerialized)
+                        {
+                            Return (PKGX (SSH1, SSL1, SSD1))
+                        }
+                    }
+
+                    If (_OSI ("Darwin"))
+                    {
+                        Method (FMCN, 0, NotSerialized)
+                        {
+                            Name (PKG, Package (0x03)
+                            {
+                                0x0101, 
+                                0x012C, 
+                                0x62
+                            })
+                            Return (PKG) /* \_SB_.PCI0.I2C1.FMCN.PKG_ */
+                        }
+                    }
+
                     Scope (TPD0)
                     {
                         If (_OSI ("Darwin"))
