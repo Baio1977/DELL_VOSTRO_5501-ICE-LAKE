@@ -1,5 +1,5 @@
 CPU BrandString: Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-MicrocodeRevision: 0x000000A8
+MicrocodeRevision: 0x000000B0
 Virtualization 0
 CPUID 000706E5 00100800 77FAFBBF BFEBFBFF
 ExtSigEcx 00000121
