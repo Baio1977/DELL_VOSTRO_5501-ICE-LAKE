@@ -26,9 +26,6 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 | BootLoader       | OpenCore                           |
 | macOS            | Monterey 12.3                      |
 
-
-![infobigsur](./Screenshot/infomac.png)
-
 ![infomonterey](./Screenshot/infomonterey.png)
 
 ### What works and What doesn't or WIP:
