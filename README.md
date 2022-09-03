@@ -22,7 +22,7 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 | NVME             | SAMSUNG 970 EVO PLUS 500 GB (MACOS)|
 | SmBios           | MacBookPro 16,2                    |
 | BootLoader       | OpenCore                           |
-| macOS            | Monterey 12.3                      |
+| macOS            | Ventura Beta 13                    |
 
 ![infomonterey](./Screenshot/infomonterey.png)
 
@@ -92,7 +92,8 @@ See [ioreg] for more clarification
 - [Guide Dortania](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) - USB creation
 
 
-## Bios settings for Bios Version 1.11.0
+## Bios settings for Bios Version 1.16.0
+
 ### Enable :
 * SATA Operation : AHCI
 * Fastboot : Thorough
