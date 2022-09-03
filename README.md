@@ -67,6 +67,7 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 ![Temp-Fan-Control](./Screenshot/Temp-Fan-Control.png)
 ![speedtest](./Screenshot/speedtest.png)
 ![touchpad](./Screenshot/touchpad.png)
+![touchpad](./Screenshot/Touchpad Ventura.png)
 ![trascinamento](./Screenshot/trascinamento.png)
 ![5finger](./Screenshot/fingermgmt.png)
 ![CPU](./Screenshot/CPU.png)
