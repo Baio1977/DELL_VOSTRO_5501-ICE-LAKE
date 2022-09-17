@@ -1,5 +1,5 @@
 CPU BrandString: Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
-MicrocodeRevision: 0x000000B0
+MicrocodeRevision: 0x000000B2
 Virtualization 0
 CPUID 000706E5 00100800 77FAFBBF BFEBFBFF
 ExtSigEcx 00000121
@@ -16,7 +16,7 @@ Signature 0x000706E5
 Brand 0x00
 AppleProcessorType 0x0709
 CstConfigLock 0
-CpuGeneration 19
+CpuGeneration 20
 MaxId 0x0000001B
 MaxExtId 0x80000008
 PackageCount 1
