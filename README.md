@@ -92,7 +92,7 @@ See [ioreg] for more clarification
 - [Guide Dortania](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) - USB creation
 
 
-## Bios settings for Bios Version 1.16.0
+## Bios settings for Bios Version 1.17.0
 
 ### Enable :
 * SATA Operation : AHCI
