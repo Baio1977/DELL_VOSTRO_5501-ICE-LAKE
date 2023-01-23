@@ -1,24 +1,5 @@
-/*
- * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200925 (64-bit version)
- * Copyright (c) 2000 - 2020 Intel Corporation
- * 
- * Disassembling to symbolic ASL+ operators
- *
- * Disassembly of iASLTKgzyY.aml, Wed Sep  7 19:26:23 2022
- *
- * Original Table Header:
- *     Signature        "SSDT"
- *     Length           0x0000079E (1950)
- *     Revision         0x02
- *     Checksum         0xB7
- *     OEM ID           "Hack"
- *     OEM Table ID     "HackLife"
- *     OEM Revision     0x00000001 (1)
- *     Compiler ID      "INTL"
- *     Compiler Version 0x20200925 (538970405)
- */
-DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000001)
+
+DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x0)
 {
     External (_SB_.AC__, DeviceObj)
     External (_SB_.ACOS, IntObj)
@@ -28,9 +9,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000001)
     External (_SB_.PCI0.I2C1, DeviceObj)
     External (_SB_.PCI0.I2C1.TPD0, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
-    External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
-    External (_SB_.PCI0.LPCB.RTC_, DeviceObj)
     External (_SB_.PCI0.RP05.PXSX._OFF, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.RP08, DeviceObj)
     External (_SB_.PCI0.RP08.PXSX, DeviceObj)
@@ -38,9 +17,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000001)
     External (_SB_.PCI0.RP09.PXSX, DeviceObj)
     External (_SB_.PCI0.RP13, DeviceObj)
     External (_SB_.PCI0.RP13.PXSX, DeviceObj)
-    External (_SB_.PCI0.SBUS, DeviceObj)
-    External (_SB_.PCI0.TXHC, DeviceObj)
-    External (_SB_.PCI0.TXHC.RHUB, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
     External (_SB_.UBTC, DeviceObj)
     External (HPTE, IntObj)
