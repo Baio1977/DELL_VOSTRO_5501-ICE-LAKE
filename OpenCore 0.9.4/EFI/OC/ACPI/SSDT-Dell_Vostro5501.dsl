@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLhkIoSx.aml, Wed Aug  9 23:57:26 2023
+ * Disassembly of iASLlXG0gS.aml, Wed Aug 23 23:33:26 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
