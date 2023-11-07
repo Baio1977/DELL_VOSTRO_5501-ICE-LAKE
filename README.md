@@ -17,12 +17,12 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 | Lan              | Realtek 8168                       |
 | Audio            | Realtek ALC236                     |
 | Ram              | 16 GB DDR4 3200 Mhz                |
-| Wifi + Bluetooth | BCM943602BAED (DW1830)             |
+| Wifi + Bluetooth | Intel AX210 + BT 5.2               |
 | NVMe             | HYNIX BC511 512 GB (WINDOWS)       |
 | NVME             | SAMSUNG 970 EVO PLUS 500 GB (MACOS)|
-| SmBios           | MacBookPro 16,2                    |
+| SmBios           | MacbookAir 9.1                     |
 | BootLoader       | OpenCore                           |
-| macOS            | Sonoma Beta 5                      |
+| macOS            | Sonoma                             |
 
 ![infomonterey](./Screenshot/infomonterey.png)
 
@@ -35,7 +35,7 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 - [x] ALC236 Internal Speakers
 - [x] ALC236 Internal microphone
 - [x] ALC236 Combojack headphones
-- [ ] ALC236 Combojack microphone
+- [x] ALC236 Combojack microphone
 - [ ] ALC236 HDMI Audio Output (Not supported at the moment)
 - [ ] ALC236 TYPE-C to HDMI Audio Output (Not supported at the moment)
 - [x] All USB-A 3.1 Ports (TYPE-C 3.2 Included)
@@ -92,7 +92,7 @@ See [ioreg] for more clarification
 - [Guide Dortania](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) - USB creation
 
 
-## Bios settings for Bios Version 1.23.0
+## Bios settings for Bios Version 1.25.0
 
 ### Enable :
 * SATA Operation : AHCI
