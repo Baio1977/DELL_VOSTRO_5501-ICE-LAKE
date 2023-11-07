@@ -107,6 +107,8 @@
                 <true/>
                 <key>EnableWriteUnprotector</key>
                 <false/>
+                <key>FixupAppleEfiImages</key>
+                <false/>
                 <key>ForceBooterSignature</key>
                 <false/>
                 <key>ForceExitBootServices</key>
@@ -316,6 +318,10 @@
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
+                    <key>#force-online</key>
+                    <data>AQAAAA==</data>
+                    <key>#igfxfw</key>
+                    <data>AgAAAA==</data>
                     <key>AAPL,GfxYTile</key>
                     <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
@@ -328,12 +334,8 @@
                     <data>AQAAAA==</data>
                     <key>enable-dbuf-early-optimizer</key>
                     <data>AQAAAA==</data>
-                    <key>force-online</key>
-                    <data>AQAAAA==</data>
                     <key>framebuffer-patch-enable</key>
                     <data>AQAAAA==</data>
-                    <key>igfxfw</key>
-                    <data>AgAAAA==</data>
                     <key>model</key>
                     <string>Intel Iris Plus Graphics</string>
                 </dict>
@@ -477,7 +479,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.4 | Audio patches</string>
+                    <string>V1.8.7 | Audio patches</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1022,7 +1024,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>-v keepsyms=1 debug=0x100 -noDC9</string>
+                    <string>-v keepsyms=1 debug=0x100 -nodisplaysleepDC6</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1091,13 +1093,13 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>FVF031207GU0000JA</string>
+                <string>FVF0085004N00001M</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>2v2mjEOI</data>
+                <data>Er+/cJ4N</data>
                 <key>SpoofVendor</key>
                 <false/>
                 <key>SystemMemoryStatus</key>
@@ -1105,9 +1107,9 @@
                 <key>SystemProductName</key>
                 <string>MacBookAir9,1</string>
                 <key>SystemSerialNumber</key>
-                <string>FVFD50U2MNHP</string>
+                <string>FVFC9TYLMNHP</string>
                 <key>SystemUUID</key>
-                <string>3E4661A4-D9F9-41D0-91B1-11F212A56201</string>
+                <string>BF3C7B4F-B2E0-41A1-82B5-B6451463A29E</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1394,6 +1396,8 @@
                 <key>ResizeGpuBars</key>
                 <integer>-1</integer>
                 <key>ResizeUsePciRbIo</key>
+                <false/>
+                <key>ShimRetainProtocol</key>
                 <false/>
                 <key>TscSyncTimeout</key>
                 <integer>0</integer>

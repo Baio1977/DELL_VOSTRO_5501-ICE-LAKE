@@ -1,23 +1,3 @@
-/*
- * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200925 (64-bit version)
- * Copyright (c) 2000 - 2020 Intel Corporation
- * 
- * Disassembling to symbolic ASL+ operators
- *
- * Disassembly of iASLlXG0gS.aml, Wed Aug 23 23:33:26 2023
- *
- * Original Table Header:
- *     Signature        "SSDT"
- *     Length           0x0000072B (1835)
- *     Revision         0x02
- *     Checksum         0x0E
- *     OEM ID           "Hack"
- *     OEM Table ID     "HackLife"
- *     OEM Revision     0x00000000 (0)
- *     Compiler ID      "INTL"
- *     Compiler Version 0x20200925 (538970405)
- */
 DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
 {
     External (_SB_.AC__, DeviceObj)
@@ -54,6 +34,18 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
             HPTE = Zero
             STAS = One
             TPDM = Zero
+        }
+
+        Scope (_GPE)
+        {
+            If (_OSI ("Darwin"))
+            {
+                Method (LXEN, 0, NotSerialized)
+                {
+                    Debug = "Method \\_GPE.LXEN Called"
+                    Return (One)
+                }
+            }
         }
 
         Scope (_SB)
@@ -307,108 +299,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
                     }
                 }
 
-                Scope (RP08)
-                {
-                    Scope (PXSX)
-                    {
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (Zero)
-                            }
-                            Else
-                            {
-                                Return (0x0F)
-                            }
-                        }
-                    }
-
-                    Device (GIGE)
-                    {
-                        Name (_ADR, Zero)  // _ADR: Address
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (0x0F)
-                            }
-                            Else
-                            {
-                                Return (Zero)
-                            }
-                        }
-                    }
-                }
-
-                Scope (RP09)
-                {
-                    Scope (PXSX)
-                    {
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (Zero)
-                            }
-                            Else
-                            {
-                                Return (0x0F)
-                            }
-                        }
-                    }
-
-                    Device (ANS0)
-                    {
-                        Name (_ADR, Zero)  // _ADR: Address
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (0x0F)
-                            }
-                            Else
-                            {
-                                Return (Zero)
-                            }
-                        }
-                    }
-                }
-
-                Scope (RP13)
-                {
-                    Scope (PXSX)
-                    {
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (Zero)
-                            }
-                            Else
-                            {
-                                Return (0x0F)
-                            }
-                        }
-                    }
-
-                    Device (ANS1)
-                    {
-                        Name (_ADR, Zero)  // _ADR: Address
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (0x0F)
-                            }
-                            Else
-                            {
-                                Return (Zero)
-                            }
-                        }
-                    }
-                }
-
                 Device (SRAM)
                 {
                     Name (_ADR, 0x00140002)  // _ADR: Address
@@ -498,6 +388,24 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
                         Return (Zero)
                     }
                 }
+            }
+
+            If (_OSI ("Darwin"))
+            {
+                Method (LPS0, 0, NotSerialized)
+                {
+                    Debug = "Method \\_SB._LPS0 Called"
+                    Return (One)
+                }
+            }
+        }
+
+        If (_OSI ("Darwin"))
+        {
+            Name (SLTP, Zero)
+            Method (_TTS, 1, NotSerialized)  // _TTS: Transition To State
+            {
+                SLTP = Arg0
             }
         }
 
