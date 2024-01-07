@@ -64,15 +64,24 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HackLife", 0x00000000)
                 }
             }
 
-            If (_OSI ("Darwin"))
+            Device (DGPU)
             {
-                Device (DGPU)
+                Name (_HID, "DGPU1000")  // _HID: Hardware ID
+                Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Name (_HID, "DGPU1000")  // _HID: Hardware ID
-                    Method (_INI, 0, NotSerialized)  // _INI: Initialize
+                    If (_OSI ("Darwin"))
                     {
-                        \_SB.PCI0.RP05.PXSX._OFF ()
+                        Return (0x0F)
                     }
+                    Else
+                    {
+                        Return (Zero)
+                    }
+                }
+
+                Method (_INI, 0, NotSerialized)  // _INI: Initialize
+                {
+                    \_SB.PCI0.RP05.PXSX._OFF ()
                 }
             }
 
