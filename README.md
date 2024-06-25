@@ -46,7 +46,7 @@ EFI for Dell Vostro 5501 with OpenCore bootloader
 - [x] F6 & F7 Brightness Key
 - [x] F10 Print Screen Key
 - [x] F1 & F2 & F3 Sound Key
-- [x] Wi-Fi and Bluetooth BCM943602BAED (DW1830) Module
+- [x] Wi-Fi and Bluetooth Intel AX210 5.2 Module
 - [x] Realtek RTL8168 LAN
 - [x] SSD NVME Slot-1 PciE Gen3x4
 - [x] SSD NVME Slot-2 PciE Gen3x4 
