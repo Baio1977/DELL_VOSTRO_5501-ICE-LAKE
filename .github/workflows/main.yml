@@ -20,9 +20,10 @@ jobs:
         rm -Rf Screenshot
         rm -Rf "TOOLS EFI MOD"
         rm -Rf .gitignore
-        rm -Rf Dell Vostro 5501.ioreg
+        rm -Rf DellVostro5501.ioreg
         rm -Rf README.md
         rm -Rf opencore-2023-11-07-192719.txt
+        rm -Rf DRIVERWINX64DW1830
         rm -Rf ".github"
         rm -Rf ".git"
         
