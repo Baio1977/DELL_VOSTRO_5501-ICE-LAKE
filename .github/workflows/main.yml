@@ -26,10 +26,10 @@ jobs:
         rm -Rf ".github"
         rm -Rf ".git"
         
-        zip -r Dell Vostro 5501.zip .
+        zip -r DellVostro5501.zip .
         
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Dell Vostro 5501
-        path: Dell Vostro 5501.zip
+        name: DellVostro5501
+        path: DellVostro5501.zip
