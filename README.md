@@ -1,4 +1,4 @@
-[![Zip and Upload Artifact](https://github.com/Baio1977/DELL_VOSTRO_5501-ICE-LAKE/actions/workflows/Artifact.yml/badge.svg)](https://github.com/Baio1977/DELL_VOSTRO_5501-ICE-LAKE/actions/workflows/Artifact.yml)
+:it:[![Zip and Upload Artifact](https://github.com/Baio1977/DELL_VOSTRO_5501-ICE-LAKE/actions/workflows/Artifact.yml/badge.svg)](https://github.com/Baio1977/DELL_VOSTRO_5501-ICE-LAKE/actions/workflows/Artifact.yml)
 
 
 [![](https://img.shields.io/badge/EFI-Release-informational?style=flat&logo=apple&logoColor=white&color=9debeb)](https://github.com/Baio1977/EFI-Varie-Hackintosh)
