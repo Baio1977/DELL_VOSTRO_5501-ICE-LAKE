@@ -1,17 +1,26 @@
-name: Zip and Upload Artifact
+name: Builds Artifact and Release
 
-on: 
+on:
   push:
-    branches:
-      - main  # You can specify the branch you want to trigger the action
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+env:
+  PROJECT_TYPE: EFI
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    env:
+      JOB_TYPE: BUILD
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4.2.0
 
     - name: Zip EFI
       run: |
@@ -30,7 +39,19 @@ jobs:
         zip -r DellVostro5501.zip .
         
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4.4.0
       with:
         name: DellVostro5501
         path: DellVostro5501.zip
+        
+    - name: Upload build
+      uses: svenstaro/upload-release-action@2.9.0
+      if: github.event_name != 'pull_request'
+      with:
+         repo_token: ${{ secrets.GITHUB_TOKEN }}
+         file: ./*.zip
+         tag: ${{ github.ref }}
+         release_name: EFI DellVostro5501 Hackintosh
+         body: ${{ github.event_name != 'release' && github.event.head_commit.message || '' }}
+         file_glob: true
+         overwrite: true
